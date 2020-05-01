@@ -5,6 +5,10 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          leading: IconButton(
+              icon: Icon(Icons.error),
+              onPressed: () =>
+                  Navigator.pushReplacementNamed(context, 'profile')),
           title: Text('HOME'),
           centerTitle: true,
         ),

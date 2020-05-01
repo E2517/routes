@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:routes/Views/Home_views.dart';
-import 'package:routes/Views/final_views.dart';
-import 'package:routes/Views/users_views.dart';
+import 'package:routes/views/404_views.dart';
+import 'package:routes/views/Home_views.dart';
+import 'package:routes/views/final_views.dart';
+import 'package:routes/views/users_views.dart';
 
 void main() => runApp(Routes());
 
@@ -18,6 +19,8 @@ class Routes extends StatelessWidget {
         "users": (BuildContext context) => Users(),
         "final": (BuildContext context) => Final(),
       },
+      onUnknownRoute: (RouteSettings settings) =>
+          MaterialPageRoute(builder: (context) => Page404()),
     );
   }
 }
